@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct zkouska_pracApp: App {
-    let persistenceController = PersistenceController.shared
+    var viewModel = LibraryViewModel()
+    
+    init() {
+        let manager = CoreDataManager()
+        manager.createMockBooks()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            LibraryView(viewModel: viewModel)
         }
     }
 }

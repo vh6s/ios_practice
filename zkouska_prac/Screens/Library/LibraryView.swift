@@ -10,40 +10,43 @@ import SwiftUI
 struct LibraryView: View {
     @State private var viewModel: LibraryViewModel
     @State private var isAddLoanViewPresented: Bool = false
+    @State private var addLoanViewModel: AddLoanViewModel
     
     init(viewModel: LibraryViewModel) {
         self.viewModel = viewModel
+        self._addLoanViewModel = State(initialValue: AddLoanViewModel(books: viewModel.state.bookItems))
     }
     
     var body: some View {
         NavigationStack {
             List(viewModel.state.bookItems) { item in
                 NavigationLink {
-                    LoanView(viewModel: LoanViewModel(loan: item))
+                    LoanView(viewModel: LoanViewModel(book: item))
                         .navigationTitle(item.title)
                 } label: {
-                    LibraryRow(item: item)
+                    LibraryRow(item: item, viewModel: viewModel)
                 }
             }
             .sheet(isPresented: $isAddLoanViewPresented) {
-                showAddLoanView()
+                showAddLoanView(viewModel: addLoanViewModel)
             }
             .navigationTitle(Text("Library"))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("+", systemImage: "add") {
+                    Button {
+                        addLoanViewModel = AddLoanViewModel(books: viewModel.state.bookItems)
                         isAddLoanViewPresented.toggle()
+                    } label: {
+                        Image(systemName: "plus").font(.title2)
                     }
                 }
             }
-        }
+        }.environment(viewModel)
     }
     
-    func showAddLoanView() -> some View {
-        let addLoanViewModel = addLoanViewModel()
-        
+    func showAddLoanView(viewModel addLoanViewModel: AddLoanViewModel) -> some View {
         return NavigationStack {
-            AddLoanView(viewmodel: addLoanViewModel)
+            AddLoanView(viewModel: addLoanViewModel)
                 .navigationTitle("Add Loan")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
@@ -53,7 +56,12 @@ struct LibraryView: View {
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Save") {
-                            AddLoanViewModel.addLoan()
+                            print("DEBUG: Save tapped in LibraryView")
+                            print("DEBUG: addLoanViewModel instance: \(ObjectIdentifier(addLoanViewModel))")
+                            print("DEBUG: selectedBook: \(String(describing: addLoanViewModel.state.selectedBook?.title))")
+                            print("DEBUG: readerName: \(addLoanViewModel.state.readerName)")
+                            addLoanViewModel.addLoan()
+                            viewModel.fetchData()
                             isAddLoanViewPresented.toggle()
                         }
                     }
@@ -64,17 +72,25 @@ struct LibraryView: View {
 
 struct LibraryRow: View {
     let item: BookItem
+    let viewModel: LibraryViewModel
         
     var body: some View {
         HStack {
-            VStack {
+            VStack(alignment: .leading) {
                 Text(item.type.type)
                 Text(item.title).bold()
                 Text(item.author)
-            }
+            }.frame(maxWidth: .infinity, alignment: .leading)
+            Spacer()
             VStack {
-                Text(item.status == .borrowed ? "Borrowed" : "Free")
-                Text("\(item.loan?.remainingDays ?? 0) d").foregroundStyle(item.loan?.remainingDays ?? 0 < 0 ? .red : .green)
+                viewModel.status(for: item) == .borrowed ?
+                Text("Borrowed").foregroundStyle(.red) : Text("Free").foregroundStyle(.green)
+                
+                if let remainingDays = viewModel.remainingDays(for: item) {
+                    Text("\(remainingDays) d").foregroundStyle(remainingDays < 0 ? .red : .green)
+                } else {
+                    Text("- d")
+                }
             }
         }
     }

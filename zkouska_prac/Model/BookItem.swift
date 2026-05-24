@@ -28,21 +28,11 @@ enum BookStatus {
     case borrowed
 }
 
-struct BookItem: Identifiable {
+struct BookItem: Identifiable, Hashable {
     var id: UUID = UUID()
     var author: String
     var title: String
     var image: UIImage
     var type: BookType
-    var loan: LoanItem?
-    var status: BookStatus {
-            loan == nil ? .free : .borrowed
-        }
-    
-    static func getSample() -> BookItem {
-        .init(
-            author: "Karel Čapek",
-            title: "R.U.R.",
-            image: UIImage(named: "ai") ?? UIImage())
-    }
+    var loanId: UUID?
 }
