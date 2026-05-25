@@ -22,7 +22,7 @@ struct LoanView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Returned") {
-                        viewModel.changeBookToReturned(book: viewModel.state.book)
+                        viewModel.changeBookToReturned()
                         libraryViewModel.fetchData()
                         dismiss()
                     }
@@ -49,12 +49,12 @@ struct LoanDetail: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Borrowed")
-                        Text(viewModel.state.loan?.borrowDate.formatted(date: .numeric, time: .omitted) ?? "-")
+                        Text(viewModel.state.loan?.borrowDate.formatted(date: .numeric, time: .omitted) ?? "")
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     VStack(alignment: .leading) {
                         Text("Until")
-                        Text(viewModel.state.loan?.dueDate.formatted(date: .numeric, time: .omitted) ?? "-")
+                        Text(viewModel.state.loan?.dueDate.formatted(date: .numeric, time: .omitted) ?? "")
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }

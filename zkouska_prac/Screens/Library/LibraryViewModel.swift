@@ -13,15 +13,12 @@ class LibraryViewModel {
     
     init() {
         dataManager = DIContainer.shared.resolve()
-        
         fetchData()
     }
     
     func fetchData() {
-        print("DEBUG: LibraryViewModel.fetchData() called")
         state.loanItems = dataManager.fetchLoans()
         state.bookItems = dataManager.fetchBooks()
-        print("DEBUG: books=\(state.bookItems.count) loans=\(state.loanItems.count)")
     }
     
     func activeLoan(for book: BookItem) -> LoanItem? {

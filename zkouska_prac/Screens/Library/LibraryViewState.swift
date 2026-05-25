@@ -11,7 +11,6 @@ import SwiftUI
 class LibraryViewState {
     var bookItems: [BookItem] = []
     var loanItems: [LoanItem] = []
-    var isLoading: Bool = false
     
     init(bookItems: [BookItem] = [], loanItems: [LoanItem] = []) {
         self.bookItems = bookItems

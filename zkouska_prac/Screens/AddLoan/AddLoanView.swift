@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddLoanView: View {
     @State private var viewModel: AddLoanViewModel
-    @Environment(\.dismiss) private var dismiss
     
     init(viewModel: AddLoanViewModel) {
         self.viewModel = viewModel
@@ -17,12 +16,6 @@ struct AddLoanView: View {
     
     var body: some View {
         AddLoanContent(viewModel: viewModel)
-            .onAppear {
-                print("DEBUG: AddLoanView onAppear")
-                print("DEBUG: viewModel instance: \(ObjectIdentifier(viewModel))")
-                print("DEBUG: availableBooks count: \(viewModel.state.availableBooks.count)")
-                print("DEBUG: selectedBook: \(String(describing: viewModel.state.selectedBook?.title))")
-            }
     }
 }
 

@@ -11,4 +11,5 @@ protocol DataManaging {
     func saveLoan(_ item: LoanItem)
     func fetchLoans() -> [LoanItem]
     func fetchBooks() -> [BookItem]
+    func saveBook(_ item: BookItem)
 }

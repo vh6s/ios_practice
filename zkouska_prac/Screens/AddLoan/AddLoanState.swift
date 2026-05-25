@@ -14,6 +14,4 @@ class AddLoanState {
     var borrowDate: Date = Date()
     var dueDate: Date = Date().addingTimeInterval(60 * 60 * 24 * 14) // trwba za 14 dni
     var availableBooks: [BookItem] = []
-    var isSaving: Bool = false
-    var errorMessage: String?
 }

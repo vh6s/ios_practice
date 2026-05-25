@@ -26,15 +26,15 @@ class LoanViewModel {
         )
     }
     
-    func changeBookToReturned(book: BookItem) {
+    func changeBookToReturned() {
         guard var loan = state.loan else {
             return
         }
         loan.returnedDate = Date()
         dataManager.saveLoan(loan)
-        state.loan = loan
+
         state.book.loanId = nil
-        state.loan?.readerName = ""
+        dataManager.saveBook (state.book)
+        state.loan = nil
     }
-    
 }

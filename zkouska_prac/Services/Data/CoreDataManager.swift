@@ -21,7 +21,6 @@ final class CoreDataManager: DataManaging {
     }
 
     func saveLoan(_ item: LoanItem) {
-        print("DEBUG: CoreDataManager.saveLoan bookId=\(item.bookId) reader=\(item.readerName)")
         let request = NSFetchRequest<Loan>(entityName: "Loan")
         request.predicate = NSPredicate(format: "id == %@", item.id as CVarArg)
 
@@ -104,6 +103,15 @@ final class CoreDataManager: DataManaging {
             entity.title = item.title
             entity.imageData = item.image.pngData()
             entity.type = item.type.rawValue
+            
+            if let loanId = item.loanId {
+                let loanRequest = NSFetchRequest<Loan>(entityName: "Loan")
+                loanRequest.predicate = NSPredicate(format: "id == %@", loanId as CVarArg)
+
+                entity.relationship = try context.fetch(loanRequest).first
+                } else {
+                    entity.relationship = nil
+            }
             save()
             
         } catch {
@@ -142,9 +150,7 @@ final class CoreDataManager: DataManaging {
             ]
             
             books.forEach { saveBook($0) }
-            
             print("Mock books inserted.")
-            
         } catch {
             print("Seed error: \(error.localizedDescription)")
         }

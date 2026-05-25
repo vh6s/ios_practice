@@ -56,10 +56,6 @@ struct LibraryView: View {
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Save") {
-                            print("DEBUG: Save tapped in LibraryView")
-                            print("DEBUG: addLoanViewModel instance: \(ObjectIdentifier(addLoanViewModel))")
-                            print("DEBUG: selectedBook: \(String(describing: addLoanViewModel.state.selectedBook?.title))")
-                            print("DEBUG: readerName: \(addLoanViewModel.state.readerName)")
                             addLoanViewModel.addLoan()
                             viewModel.fetchData()
                             isAddLoanViewPresented.toggle()
