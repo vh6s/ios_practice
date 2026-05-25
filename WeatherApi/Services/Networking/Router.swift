@@ -1,10 +1,3 @@
-//
-//  Router.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import Foundation
 
 // https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,rain_sum&current=temperature_2m

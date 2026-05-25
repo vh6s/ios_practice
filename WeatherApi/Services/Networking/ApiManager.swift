@@ -1,10 +1,3 @@
-//
-//  ApiManager.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import Foundation
 
 protocol APIManaging {

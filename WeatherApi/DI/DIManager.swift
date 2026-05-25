@@ -1,10 +1,3 @@
-//
-//  DIManager.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import Foundation
 
 final class DIContainer {
@@ -32,18 +25,14 @@ final class DIContainer {
         let key = String(reflecting: T.self)
 
         if let cachedService = cache[key] as? T {
-            print("🥣 Resolving cached instance of \(T.self).")
-
             return cachedService
         }
 
         if let resolver = resolvers[key], let service = resolver() as? T {
-            print("🥣 Resolving new instance of \(T.self).")
-
             return service
         }
 
-        fatalError("🥣 \(key) has not been registered.")
+        fatalError("DEBUG [DIContainer] \(key) has not been registered.")
     }
 }
 

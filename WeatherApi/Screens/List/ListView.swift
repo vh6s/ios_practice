@@ -1,10 +1,5 @@
-//
-//  ListView.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
 import SwiftUI
+import Foundation
 
 struct ListView: View {
     @State private var viewModel: ListViewModel
@@ -39,8 +34,12 @@ struct ListView: View {
                     }
                 }
             }
-        }.task { viewModel.loadPlaces() } // load list on start
+        }
+        .task {
+            await viewModel.loadPlaces() // load list of places on screen appear
+        }
     }
+
     func showMapView() -> some View {
         let mapViewModel = MapViewModel()
         
@@ -57,13 +56,12 @@ struct ListView: View {
                         // musime zabalit do Task, jelikoz je ukaldani async funkce
                         Task {
                             await mapViewModel.saveLocation()
-                            viewModel.loadPlaces()
+                            await viewModel.loadPlaces() // znovu nacteme lokace v listu, aby se objevila nove ulozene misto
                             isMapPresent.toggle()
-                             // update of the list
+                        }
                     }
                 }
             }
-        }
     }
 }
 
@@ -78,7 +76,7 @@ struct ListRow: View {
             Spacer()
             VStack(alignment: .trailing) {
                 Text("\(Int(place.currentTemperature ?? 0)) °C").foregroundStyle(
-                    (place.currentTemperature ?? 0) > 20 ? .red : .blue)
+                    (place.currentTemperature ?? 0) > 20 ? .red : .blue) // more than 20°C = red, less than 20°C = blue
                     
                 Text("\(Int(place.rainSum ?? 0)) mm")
             }

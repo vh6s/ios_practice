@@ -1,16 +1,9 @@
-//
-//  DetailState.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import SwiftUI
 
 @Observable
 class DetailState {
-    var place: LocationItem
-    var weatherData: WeatherData?
+    var place: LocationItem // Selected locality for the detail screen
+    var weatherData: WeatherData? // Loaded data for selected locality
     
     init(place: LocationItem) {
             self.place = place

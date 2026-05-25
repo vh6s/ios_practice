@@ -1,10 +1,3 @@
-//
-//  WeatherDataRouter.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 enum WeatherDataRouter {
     case weather(long: Double, lat: Double)
 }
@@ -28,13 +21,14 @@ extension WeatherDataRouter: Router {
         }
     }
     
+    // URL parameters that would be added into the query string
     var urlParameters: [String : Any]? {
         switch self {
         case let .weather(long: long, lat: lat):
             [
                 "longitude": long,
                 "latitude": lat,
-                "daily": "temperature_2m_max, temperature_2m_min, rain_sum",
+                "daily": "temperature_2m_max,temperature_2m_min,rain_sum",
                 "current": "temperature_2m"
             ]
         }

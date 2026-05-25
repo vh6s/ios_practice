@@ -1,10 +1,3 @@
-//
-//  WeatherApiApp.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import SwiftUI
 
 @main

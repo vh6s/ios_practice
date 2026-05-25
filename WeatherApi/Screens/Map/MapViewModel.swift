@@ -1,10 +1,5 @@
-//
-//  MapViewModel.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
 import SwiftUI
+import Foundation
 
 @Observable
 class MapViewModel {
@@ -15,23 +10,17 @@ class MapViewModel {
     init() {
         dataManager = DIContainer.shared.resolve()
         locationManager = DIContainer.shared.resolve()
+
     }
     
     func saveLocation() async {
-        guard let camera = state.cameraPosition.camera else {
-            return
-        }
+        let coordinate = state.centerCoordinate // retrieve coordinates for the point on map
 
-        let coordinate = camera.centerCoordinate
-            
         let locationName =
-            await locationManager.getCurrentLocationName(from: coordinate) ?? "Unknown location"
+            await locationManager.getCurrentLocationName(from: coordinate) ?? "Unknown location" // retrieve the location name
         
-        let item = LocationItem(
-            coordinate: coordinate,
-            name: locationName
-        )
+        let item = LocationItem(coordinate: coordinate, name: locationName) // create the model representation to be used for save into CoreData
+
         dataManager.savePlace(item)
-        state.selectedPlace = item
     }
 }

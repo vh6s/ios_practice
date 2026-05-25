@@ -1,10 +1,3 @@
-//
-//  WeatherData.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
-
 import Foundation
 
 struct WeatherData: Codable {
@@ -18,6 +11,7 @@ struct Daily: Codable {
     let minTemperatures: [Double]
     let rainSum: [Double]
 
+    // Mapping klicu do swiftu z JSONu
     enum CodingKeys: String, CodingKey {
         case time
         case maxTemperatures = "temperature_2m_max"

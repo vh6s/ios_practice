@@ -1,15 +1,12 @@
-//
-//  CoreDataManager.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
 import SwiftUI
 import CoreData
 import MapKit
+import Foundation
 
 final class CoreDataManager: DataManaging {
-    private let container = NSPersistentContainer(name: "WeatherApi") // beware of typos!
+    // Name must be exactly same as the `.xcdatamodeld`
+    private let container = NSPersistentContainer(name: "WeatherApi")
+    // context used for operations inside CoreData
     private var context: NSManagedObjectContext { container.viewContext }
     
     init() {

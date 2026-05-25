@@ -1,9 +1,3 @@
-//
-//  DetailViewModel.swift
-//  WeatherApi
-//
-//  Created by Matěj on 24.05.2026.
-//
 import SwiftUI
 
 @Observable
@@ -18,6 +12,8 @@ class DetailViewModel {
         self.dataManager = DIContainer.shared.resolve()
     }
     
+    // Loads weather asynchronously for coordinates from stateplace.coordinates
+    // into state.weatherData
     func loadWeather() async {
         do {
             let weather: WeatherData = try await weatherManager.request(
