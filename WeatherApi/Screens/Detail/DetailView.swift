@@ -30,18 +30,22 @@ struct DetailContent: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Temperature")) {
-                Text("\(viewModel.state.weatherData?.current.temp ?? 0, specifier: "%.1f")  °C")
-            }
-            Section(header: Text("Min. Temperature")) {
-                Text("\(viewModel.state.weatherData?.daily.minTemperatures.first ?? 0, specifier: "%.1f") °C")
-            }
-            Section(header: Text("Max. Temperature")) {
-                Text("\(viewModel.state.weatherData?.daily.maxTemperatures.first ?? 0, specifier: "%.1f") °C")
-            }
-            Section(header: Text("Rain")) {
-                Text("\(viewModel.state.weatherData?.daily.rainSum.first ?? 0, specifier: "%.1f") mm")
-            }
+            DetailRow(header: "Temperature", value: viewModel.state.weatherData?.current.temp ?? 0, unit: "°C")
+            DetailRow(header: "Min. temperature", value: viewModel.state.weatherData?.daily.minTemperatures.first ?? 0, unit: "°C")
+            DetailRow(header: "Max. temperature", value: viewModel.state.weatherData?.daily.maxTemperatures.first ?? 0, unit: "°C")
+            DetailRow(header: "Rain", value: viewModel.state.weatherData?.daily.rainSum.first ?? 0, unit: "mm")
+        }
+    }
+}
+
+struct DetailRow: View {
+    let header: String
+    let value: Double
+    let unit: String
+    
+    var body: some View {
+        Section(header: Text(header)) {
+            Text("\(value, specifier: "%.1f") \(unit)")
         }
     }
 }
