@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E99110F1307D1DE1005B9A80 /* Tasks Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E99110F0307D1DE1005B9A80 /* Tasks Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E9911242307D579B005B9A80 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9911241307D579B005B9A80 /* WidgetKit.framework */; };
+		E9911244307D579B005B9A80 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9911243307D579B005B9A80 /* SwiftUI.framework */; };
+		E991124F307D579C005B9A80 /* TasksWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E991123F307D579B005B9A80 /* TasksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E99110F2307D1DE1005B9A80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99110DB307D1DE0005B9A80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E99110EF307D1DE1005B9A80;
+			remoteInfo = "Tasks Watch App";
+		};
+		E991124D307D579C005B9A80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99110DB307D1DE0005B9A80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E991123E307D579B005B9A80;
+			remoteInfo = TasksWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9911100307D1DE1005B9A80 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolder = Product;
+			files = (
+				E99110F1307D1DE1005B9A80 /* Tasks Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+		};
+		E9911254307D579C005B9A80 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				E991124F307D579C005B9A80 /* TasksWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E99110E3307D1DE0005B9A80 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E99110F0307D1DE1005B9A80 /* Tasks Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tasks Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E991123F307D579B005B9A80 /* TasksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TasksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9911241307D579B005B9A80 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E9911243307D579B005B9A80 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E9911255307D57CB005B9A80 /* TasksWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TasksWidgetExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E9911218307D42B9005B9A80 /* Exceptions for "Tasks" folder in "Tasks Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DI/DIManager.swift,
+				DI/Injected.swift,
+				Model/TaskItem.swift,
+			);
+			target = E99110EF307D1DE1005B9A80 /* Tasks Watch App */;
+		};
+		E991121B307D42C2005B9A80 /* Exceptions for "Shared" folder in "Tasks Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Connectivity/Connector.swift,
+				Connectivity/ConnectorManaging.swift,
+			);
+			target = E99110EF307D1DE1005B9A80 /* Tasks Watch App */;
+		};
+		E9911250307D579C005B9A80 /* Exceptions for "TasksWidget" folder in "TasksWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E991123E307D579B005B9A80 /* TasksWidgetExtension */;
+		};
+		E991125A307D58EB005B9A80 /* Exceptions for "Tasks" folder in "TasksWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DI/DIManager.swift,
+				DI/Injected.swift,
+				Model/TaskItem.swift,
+				Model/Tasks.xcdatamodeld,
+				Services/Data/CoreDataManager.swift,
+				Services/Data/DataManaging.swift,
+			);
+			target = E991123E307D579B005B9A80 /* TasksWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E99110E5307D1DE0005B9A80 /* Tasks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E9911218307D42B9005B9A80 /* Exceptions for "Tasks" folder in "Tasks Watch App" target */,
+				E991125A307D58EB005B9A80 /* Exceptions for "Tasks" folder in "TasksWidgetExtension" target */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E99110F4307D1DE1005B9A80 /* Tasks Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tasks Watch App";
+			sourceTree = "<group>";
+		};
+		E9911205307D37DB005B9A80 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E991121B307D42C2005B9A80 /* Exceptions for "Shared" folder in "Tasks Watch App" target */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E9911245307D579B005B9A80 /* TasksWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E9911250307D579C005B9A80 /* Exceptions for "TasksWidget" folder in "TasksWidgetExtension" target */,
+			);
+			path = TasksWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E99110E0307D1DE0005B9A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E99110ED307D1DE1005B9A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E991123C307D579B005B9A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				E9911244307D579B005B9A80 /* SwiftUI.framework in Frameworks */,
+				E9911242307D579B005B9A80 /* WidgetKit.framework in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E99110DA307D1DE0005B9A80 = {
+			isa = PBXGroup;
+			children = (
+				E9911255307D57CB005B9A80 /* TasksWidgetExtension.entitlements */,
+				E9911205307D37DB005B9A80 /* Shared */,
+				E99110E5307D1DE0005B9A80 /* Tasks */,
+				E99110F4307D1DE1005B9A80 /* Tasks Watch App */,
+				E9911245307D579B005B9A80 /* TasksWidget */,
+				E9911240307D579B005B9A80 /* Frameworks */,
+				E99110E4307D1DE0005B9A80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E99110E4307D1DE0005B9A80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E99110E3307D1DE0005B9A80 /* Tasks.app */,
+				E99110F0307D1DE1005B9A80 /* Tasks Watch App.app */,
+				E991123F307D579B005B9A80 /* TasksWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9911240307D579B005B9A80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9911241307D579B005B9A80 /* WidgetKit.framework */,
+				E9911243307D579B005B9A80 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E99110E2307D1DE0005B9A80 /* Tasks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9911101307D1DE1005B9A80 /* Build configuration list for PBXNativeTarget "Tasks" */;
+			buildPhases = (
+				E99110DF307D1DE0005B9A80 /* Sources */,
+				E99110E0307D1DE0005B9A80 /* Frameworks */,
+				E99110E1307D1DE0005B9A80 /* Resources */,
+				E9911100307D1DE1005B9A80 /* Embed Watch Content */,
+				E9911254307D579C005B9A80 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E99110F3307D1DE1005B9A80 /* PBXTargetDependency */,
+				E991124E307D579C005B9A80 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E99110E5307D1DE0005B9A80 /* Tasks */,
+				E9911205307D37DB005B9A80 /* Shared */,
+			);
+			name = Tasks;
+			productName = Tasks;
+			productReference = E99110E3307D1DE0005B9A80 /* Tasks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E99110EF307D1DE1005B9A80 /* Tasks Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99110FD307D1DE1005B9A80 /* Build configuration list for PBXNativeTarget "Tasks Watch App" */;
+			buildPhases = (
+				E99110EC307D1DE1005B9A80 /* Sources */,
+				E99110ED307D1DE1005B9A80 /* Frameworks */,
+				E99110EE307D1DE1005B9A80 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				E99110F4307D1DE1005B9A80 /* Tasks Watch App */,
+			);
+			name = "Tasks Watch App";
+			productName = "Tasks Watch App";
+			productReference = E99110F0307D1DE1005B9A80 /* Tasks Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E991123E307D579B005B9A80 /* TasksWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9911251307D579C005B9A80 /* Build configuration list for PBXNativeTarget "TasksWidgetExtension" */;
+			buildPhases = (
+				E991123B307D579B005B9A80 /* Sources */,
+				E991123C307D579B005B9A80 /* Frameworks */,
+				E991123D307D579B005B9A80 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				E9911245307D579B005B9A80 /* TasksWidget */,
+			);
+			name = TasksWidgetExtension;
+			productName = TasksWidgetExtension;
+			productReference = E991123F307D579B005B9A80 /* TasksWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E99110DB307D1DE0005B9A80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					E99110E2307D1DE0005B9A80 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E99110EF307D1DE1005B9A80 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E991123E307D579B005B9A80 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = E99110DE307D1DE0005B9A80 /* Build configuration list for PBXProject "Tasks" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E99110DA307D1DE0005B9A80;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E99110E4307D1DE0005B9A80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E99110E2307D1DE0005B9A80 /* Tasks */,
+				E99110EF307D1DE1005B9A80 /* Tasks Watch App */,
+				E991123E307D579B005B9A80 /* TasksWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E99110E1307D1DE0005B9A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E99110EE307D1DE1005B9A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E991123D307D579B005B9A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E99110DF307D1DE0005B9A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		E99110EC307D1DE1005B9A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		E991123B307D579B005B9A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E99110F3307D1DE1005B9A80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E99110EF307D1DE1005B9A80 /* Tasks Watch App */;
+			targetProxy = E99110F2307D1DE1005B9A80 /* PBXContainerItemProxy */;
+		};
+		E991124E307D579C005B9A80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E991123E307D579B005B9A80 /* TasksWidgetExtension */;
+			targetProxy = E991124D307D579C005B9A80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E99110FB307D1DE1005B9A80 /* Debug configuration for PBXProject "Tasks" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E99110FC307D1DE1005B9A80 /* Release configuration for PBXProject "Tasks" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E99110FE307D1DE1005B9A80 /* Debug configuration for PBXNativeTarget "Tasks Watch App" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tasks;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = paja.Tasks;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		E99110FF307D1DE1005B9A80 /* Release configuration for PBXNativeTarget "Tasks Watch App" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tasks;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = paja.Tasks;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		E9911102307D1DE1005B9A80 /* Debug configuration for PBXNativeTarget "Tasks" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tasks;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9911103307D1DE1005B9A80 /* Release configuration for PBXNativeTarget "Tasks" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tasks;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9911252307D579C005B9A80 /* Debug configuration for PBXNativeTarget "TasksWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TasksWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TasksWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks.TasksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited) WIDGET_EXTENSION";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9911253307D579C005B9A80 /* Release configuration for PBXNativeTarget "TasksWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TasksWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TasksWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.Tasks.TasksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E99110DE307D1DE0005B9A80 /* Build configuration list for PBXProject "Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99110FB307D1DE1005B9A80 /* Debug configuration for PBXProject "Tasks" */,
+				E99110FC307D1DE1005B9A80 /* Release configuration for PBXProject "Tasks" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E99110FD307D1DE1005B9A80 /* Build configuration list for PBXNativeTarget "Tasks Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99110FE307D1DE1005B9A80 /* Debug configuration for PBXNativeTarget "Tasks Watch App" */,
+				E99110FF307D1DE1005B9A80 /* Release configuration for PBXNativeTarget "Tasks Watch App" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E9911101307D1DE1005B9A80 /* Build configuration list for PBXNativeTarget "Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9911102307D1DE1005B9A80 /* Debug configuration for PBXNativeTarget "Tasks" */,
+				E9911103307D1DE1005B9A80 /* Release configuration for PBXNativeTarget "Tasks" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E9911251307D579C005B9A80 /* Build configuration list for PBXNativeTarget "TasksWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9911252307D579C005B9A80 /* Debug configuration for PBXNativeTarget "TasksWidgetExtension" */,
+				E9911253307D579C005B9A80 /* Release configuration for PBXNativeTarget "TasksWidgetExtension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E99110DB307D1DE0005B9A80 /* Project object */;
+	validationLevel = 1;
+}

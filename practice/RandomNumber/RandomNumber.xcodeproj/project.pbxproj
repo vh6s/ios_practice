@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E91C954C307BDA8800F4B166 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91C954B307BDA8800F4B166 /* WidgetKit.framework */; };
+		E91C954E307BDA8800F4B166 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91C954D307BDA8800F4B166 /* SwiftUI.framework */; };
+		E91C9559307BDA8900F4B166 /* RandomNumber WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E91C9549307BDA8800F4B166 /* RandomNumber WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E981FDDE307BA97C009737E0 /* RandomNumber Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E981FDDD307BA97C009737E0 /* RandomNumber Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E91C9557307BDA8900F4B166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E981FDC8307BA97A009737E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E91C9548307BDA8800F4B166;
+			remoteInfo = "RandomNumber WidgetExtension";
+		};
+		E981FDDF307BA97C009737E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E981FDC8307BA97A009737E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E981FDDC307BA97C009737E0;
+			remoteInfo = "RandomNumber Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E91C93E9307BCA4200F4B166 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				E91C9559307BDA8900F4B166 /* RandomNumber WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+		E981FDED307BA97D009737E0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolder = Product;
+			files = (
+				E981FDDE307BA97C009737E0 /* RandomNumber Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E91C9549307BDA8800F4B166 /* RandomNumber WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RandomNumber WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91C954B307BDA8800F4B166 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E91C954D307BDA8800F4B166 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E91C9569307BDABE00F4B166 /* RandomNumber WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RandomNumber WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		E981FDD0307BA97B009737E0 /* RandomNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E981FDDD307BA97C009737E0 /* RandomNumber Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomNumber Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E91C955C307BDA8900F4B166 /* Exceptions for "RandomNumber Widget" folder in "RandomNumber WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E91C9548307BDA8800F4B166 /* RandomNumber WidgetExtension */;
+		};
+		E91C956B307BDB6400F4B166 /* Exceptions for "RandomNumber" folder in "RandomNumber WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DI/DIManager.swift,
+				DI/Injected.swift,
+				Model/NumberMessage.swift,
+				Model/RandomNumber.xcdatamodeld,
+				Services/Data/CoreDataManager.swift,
+				Services/Data/DataManaging.swift,
+			);
+			target = E91C9548307BDA8800F4B166 /* RandomNumber WidgetExtension */;
+		};
+		E981FE04307BAC15009737E0 /* Exceptions for "RandomNumber" folder in "RandomNumber Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DI/DIManager.swift,
+				DI/Injected.swift,
+				Model/NumberMessage.swift,
+			);
+			target = E981FDDC307BA97C009737E0 /* RandomNumber Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E91C954F307BDA8800F4B166 /* RandomNumber Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E91C955C307BDA8900F4B166 /* Exceptions for "RandomNumber Widget" folder in "RandomNumber WidgetExtension" target */,
+			);
+			path = "RandomNumber Widget";
+			sourceTree = "<group>";
+		};
+		E981FDD2307BA97B009737E0 /* RandomNumber */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E981FE04307BAC15009737E0 /* Exceptions for "RandomNumber" folder in "RandomNumber Watch App" target */,
+				E91C956B307BDB6400F4B166 /* Exceptions for "RandomNumber" folder in "RandomNumber WidgetExtension" target */,
+			);
+			path = RandomNumber;
+			sourceTree = "<group>";
+		};
+		E981FDE1307BA97C009737E0 /* RandomNumber Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "RandomNumber Watch App";
+			sourceTree = "<group>";
+		};
+		E981FE02307BAC02009737E0 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E91C9546307BDA8800F4B166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				E91C954E307BDA8800F4B166 /* SwiftUI.framework in Frameworks */,
+				E91C954C307BDA8800F4B166 /* WidgetKit.framework in Frameworks */,
+			);
+		};
+		E981FDCD307BA97B009737E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E981FDDA307BA97C009737E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E91C954A307BDA8800F4B166 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E91C954B307BDA8800F4B166 /* WidgetKit.framework */,
+				E91C954D307BDA8800F4B166 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E981FDC7307BA97A009737E0 = {
+			isa = PBXGroup;
+			children = (
+				E91C9569307BDABE00F4B166 /* RandomNumber WidgetExtension.entitlements */,
+				E981FE02307BAC02009737E0 /* Shared */,
+				E981FDD2307BA97B009737E0 /* RandomNumber */,
+				E981FDE1307BA97C009737E0 /* RandomNumber Watch App */,
+				E91C954F307BDA8800F4B166 /* RandomNumber Widget */,
+				E91C954A307BDA8800F4B166 /* Frameworks */,
+				E981FDD1307BA97B009737E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E981FDD1307BA97B009737E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E981FDD0307BA97B009737E0 /* RandomNumber.app */,
+				E981FDDD307BA97C009737E0 /* RandomNumber Watch App.app */,
+				E91C9549307BDA8800F4B166 /* RandomNumber WidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E91C9548307BDA8800F4B166 /* RandomNumber WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91C955D307BDA8900F4B166 /* Build configuration list for PBXNativeTarget "RandomNumber WidgetExtension" */;
+			buildPhases = (
+				E91C9545307BDA8800F4B166 /* Sources */,
+				E91C9546307BDA8800F4B166 /* Frameworks */,
+				E91C9547307BDA8800F4B166 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				E91C954F307BDA8800F4B166 /* RandomNumber Widget */,
+			);
+			name = "RandomNumber WidgetExtension";
+			productName = "RandomNumber WidgetExtension";
+			productReference = E91C9549307BDA8800F4B166 /* RandomNumber WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E981FDCF307BA97B009737E0 /* RandomNumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E981FDEE307BA97D009737E0 /* Build configuration list for PBXNativeTarget "RandomNumber" */;
+			buildPhases = (
+				E981FDCC307BA97B009737E0 /* Sources */,
+				E981FDCD307BA97B009737E0 /* Frameworks */,
+				E981FDCE307BA97B009737E0 /* Resources */,
+				E981FDED307BA97D009737E0 /* Embed Watch Content */,
+				E91C93E9307BCA4200F4B166 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E981FDE0307BA97C009737E0 /* PBXTargetDependency */,
+				E91C9558307BDA8900F4B166 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E981FDD2307BA97B009737E0 /* RandomNumber */,
+				E981FE02307BAC02009737E0 /* Shared */,
+			);
+			name = RandomNumber;
+			productName = RandomNumber;
+			productReference = E981FDD0307BA97B009737E0 /* RandomNumber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E981FDDC307BA97C009737E0 /* RandomNumber Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E981FDEA307BA97D009737E0 /* Build configuration list for PBXNativeTarget "RandomNumber Watch App" */;
+			buildPhases = (
+				E981FDD9307BA97C009737E0 /* Sources */,
+				E981FDDA307BA97C009737E0 /* Frameworks */,
+				E981FDDB307BA97C009737E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				E981FDE1307BA97C009737E0 /* RandomNumber Watch App */,
+				E981FE02307BAC02009737E0 /* Shared */,
+			);
+			name = "RandomNumber Watch App";
+			productName = "RandomNumber Watch App";
+			productReference = E981FDDD307BA97C009737E0 /* RandomNumber Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E981FDC8307BA97A009737E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					E91C9548307BDA8800F4B166 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E981FDCF307BA97B009737E0 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					E981FDDC307BA97C009737E0 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = E981FDCB307BA97A009737E0 /* Build configuration list for PBXProject "RandomNumber" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E981FDC7307BA97A009737E0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E981FDD1307BA97B009737E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E981FDCF307BA97B009737E0 /* RandomNumber */,
+				E981FDDC307BA97C009737E0 /* RandomNumber Watch App */,
+				E91C9548307BDA8800F4B166 /* RandomNumber WidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E91C9547307BDA8800F4B166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E981FDCE307BA97B009737E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E981FDDB307BA97C009737E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E91C9545307BDA8800F4B166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		E981FDCC307BA97B009737E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		E981FDD9307BA97C009737E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E91C9558307BDA8900F4B166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E91C9548307BDA8800F4B166 /* RandomNumber WidgetExtension */;
+			targetProxy = E91C9557307BDA8900F4B166 /* PBXContainerItemProxy */;
+		};
+		E981FDE0307BA97C009737E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E981FDDC307BA97C009737E0 /* RandomNumber Watch App */;
+			targetProxy = E981FDDF307BA97C009737E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E91C955A307BDA8900F4B166 /* Debug configuration for PBXNativeTarget "RandomNumber WidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "RandomNumber WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RandomNumber Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RandomNumber Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "paja.RandomNumber.RandomNumber-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited) WIDGET_EXTENSION";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E91C955B307BDA8900F4B166 /* Release configuration for PBXNativeTarget "RandomNumber WidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "RandomNumber WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RandomNumber Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RandomNumber Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "paja.RandomNumber.RandomNumber-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E981FDE8307BA97D009737E0 /* Debug configuration for PBXProject "RandomNumber" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E981FDE9307BA97D009737E0 /* Release configuration for PBXProject "RandomNumber" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E981FDEB307BA97D009737E0 /* Debug configuration for PBXNativeTarget "RandomNumber Watch App" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomNumber;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = paja.RandomNumber;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.RandomNumber.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		E981FDEC307BA97D009737E0 /* Release configuration for PBXNativeTarget "RandomNumber Watch App" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomNumber;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = paja.RandomNumber;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.RandomNumber.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		E981FDEF307BA97D009737E0 /* Debug configuration for PBXNativeTarget "RandomNumber" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RandomNumber/RandomNumber.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomNumber;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.RandomNumber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E981FDF0307BA97D009737E0 /* Release configuration for PBXNativeTarget "RandomNumber" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RandomNumber/RandomNumber.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomNumber;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = paja.RandomNumber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E91C955D307BDA8900F4B166 /* Build configuration list for PBXNativeTarget "RandomNumber WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91C955A307BDA8900F4B166 /* Debug configuration for PBXNativeTarget "RandomNumber WidgetExtension" */,
+				E91C955B307BDA8900F4B166 /* Release configuration for PBXNativeTarget "RandomNumber WidgetExtension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E981FDCB307BA97A009737E0 /* Build configuration list for PBXProject "RandomNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E981FDE8307BA97D009737E0 /* Debug configuration for PBXProject "RandomNumber" */,
+				E981FDE9307BA97D009737E0 /* Release configuration for PBXProject "RandomNumber" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E981FDEA307BA97D009737E0 /* Build configuration list for PBXNativeTarget "RandomNumber Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E981FDEB307BA97D009737E0 /* Debug configuration for PBXNativeTarget "RandomNumber Watch App" */,
+				E981FDEC307BA97D009737E0 /* Release configuration for PBXNativeTarget "RandomNumber Watch App" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E981FDEE307BA97D009737E0 /* Build configuration list for PBXNativeTarget "RandomNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E981FDEF307BA97D009737E0 /* Debug configuration for PBXNativeTarget "RandomNumber" */,
+				E981FDF0307BA97D009737E0 /* Release configuration for PBXNativeTarget "RandomNumber" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E981FDC8307BA97A009737E0 /* Project object */;
+	validationLevel = 1;
+}
